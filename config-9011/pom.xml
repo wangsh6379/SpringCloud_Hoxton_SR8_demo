@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.wangsh</groupId>
-		<artifactId>springcloud_demo</artifactId>
+		<artifactId>springcloud_hoxton_SR8</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>config-9011</artifactId>
