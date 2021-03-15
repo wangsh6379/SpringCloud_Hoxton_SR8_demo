@@ -40,7 +40,7 @@
         <!-- feign相关 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <!-- hystrix和 hystrix-dashboard相关 -->
         <dependency>

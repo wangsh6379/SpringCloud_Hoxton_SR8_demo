@@ -27,6 +27,8 @@
         <module>zull-9001</module>
         <module>hystrix-8087</module>
         <module>hystrix-turbine-8088</module>
+        <module>spring-boot-admin-server-8101</module>
+        <module>spring-boot-admin-client-9101</module>
     </modules>
 
     <properties>
@@ -36,8 +38,12 @@
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
-        <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
-        <spring.boot-version>2.2.5.RELEASE</spring.boot-version>
+        <!--<spring.cloud-version>Hoxton.SR8</spring.cloud-version>-->
+        <!--由于版本问题，Springboot不兼容Hoxton.SR8,本次使用的是SpringCloud Greenwich.SR6 版本、SpringBoot 2.1.5.RELEASE版本-->
+        <spring.cloud-version>Greenwich.SR6</spring.cloud-version>
+        <!--<spring.boot-version>2.2.5.RELEASE</spring.boot-version>-->
+        <spring.boot-version>2.1.5.RELEASE</spring.boot-version>
+        <spring.loaded-version>1.2.8.RELEASE</spring.loaded-version>
     </properties>
 
     <dependencyManagement>
@@ -87,6 +93,13 @@
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
+            <!-- 修改后立即生效，热部署 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>springloaded</artifactId>
+                <version>${spring.loaded-version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>
