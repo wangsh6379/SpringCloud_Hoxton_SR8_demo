@@ -29,6 +29,8 @@
         <module>hystrix-turbine-8088</module>
         <module>spring-boot-admin-server-8101</module>
         <module>spring-boot-admin-client-9101</module>
+        <module>provider-dept-nacos-8007</module>
+        <module>consumer-nacos-dept-83</module>
     </modules>
 
     <properties>
@@ -99,7 +101,14 @@
                 <artifactId>springloaded</artifactId>
                 <version>${spring.loaded-version}</version>
             </dependency>
-
+            <!--添加阿里巴巴仓库-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>0.9.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
