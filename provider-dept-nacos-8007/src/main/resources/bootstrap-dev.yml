@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: provider-dept-nacos-8007
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        file-extension: properties
+        server-addr: 127.0.0.1:8848
+        namespace: fd39ff0c-ae44-458a-a7c9-e7e975488c06
+        group: DEV_GROUP
+        prefix: ${spring.application.name}

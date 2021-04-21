@@ -40,11 +40,13 @@
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
-        <!--<spring.cloud-version>Hoxton.SR8</spring.cloud-version>-->
         <!--由于版本问题，Springboot不兼容Hoxton.SR8,本次使用的是SpringCloud Greenwich.SR6 版本、SpringBoot 2.1.5.RELEASE版本-->
-        <spring.cloud-version>Greenwich.SR6</spring.cloud-version>
+        <!--<spring.cloud-version>Greenwich.SR6</spring.cloud-version>-->
+        <!--<spring.boot-version>2.1.5.RELEASE</spring.boot-version>-->
+
+        <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
         <!--<spring.boot-version>2.2.5.RELEASE</spring.boot-version>-->
-        <spring.boot-version>2.1.5.RELEASE</spring.boot-version>
+        <spring.boot-version>2.3.2.RELEASE</spring.boot-version>
         <spring.loaded-version>1.2.8.RELEASE</spring.loaded-version>
     </properties>
 

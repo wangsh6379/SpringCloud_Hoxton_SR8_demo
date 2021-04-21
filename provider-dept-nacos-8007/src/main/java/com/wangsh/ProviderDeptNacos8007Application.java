@@ -1,5 +1,6 @@
 package com.wangsh;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -23,6 +24,13 @@ public class ProviderDeptNacos8007Application {
         @RequestMapping(value = "/dept/{string}", method = RequestMethod.GET)
         public String echo(@PathVariable String string) {
             return string;
+        }
+
+        @Value("${spring.datasource.password}")
+        private String pass;
+        @RequestMapping(value = "/dept2/{string}", method = RequestMethod.GET)
+        public String echo2(@PathVariable String string) {
+            return string+"==="+pass;
         }
     }
 }
