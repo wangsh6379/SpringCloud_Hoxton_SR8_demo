@@ -40,6 +40,7 @@
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
+        <alibaba-cloud.version>2.2.5.RELEASE</alibaba-cloud.version>
         <!--由于版本问题，Springboot不兼容Hoxton.SR8,本次使用的是SpringCloud Greenwich.SR6 版本、SpringBoot 2.1.5.RELEASE版本-->
         <!--<spring.cloud-version>Greenwich.SR6</spring.cloud-version>-->
         <!--<spring.boot-version>2.1.5.RELEASE</spring.boot-version>-->
@@ -59,6 +60,15 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

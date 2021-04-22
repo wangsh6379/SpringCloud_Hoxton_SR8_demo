@@ -3,13 +3,16 @@ package com.wangsh.controller;
 import com.wangsh.entity.Dept;
 import com.wangsh.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RefreshScope //增加此注解后可实现自动更新配置文件，从nacos中获取配置
 public class DeptController {
     @Autowired
     private DeptService deptService;
@@ -43,5 +46,12 @@ public class DeptController {
             }
         }
         return null;
+    }
+
+    @Value("${name}")
+    private String name;
+    @GetMapping("/nacos/get")
+    public String getName(){
+        return name;
     }
 }
